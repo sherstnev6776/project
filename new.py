@@ -52,8 +52,11 @@ while l < n:
         l= l + 1
     else:
         l = l + 1
+
+virvse = virfer + virmart + virapr + virmay
       
 print('выручка за ферваль' + ' составила ' + str(virfer))
 print('выручка за март' + ' составила ' + str(virmart))
 print('выручка за апрель' + ' составила ' + str(virapr))
 print('выручка за май' + ' составила ' + str(virmay))
+print('всего' + 'выручка' + ' составила ' + str(virvse))
