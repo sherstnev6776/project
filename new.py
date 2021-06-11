@@ -1,5 +1,5 @@
 Задание: автоматизация ABC анализа продаж при помощи python
- import openpyxl
+import openpyxl
 
 wb_obj = openpyxl.load_workbook("pyton.xlsx")
 sheet_obj = wb_obj.active
@@ -13,16 +13,14 @@ s = 3
 v = 3
 n=(sheet_obj.max_row)
 stroki=(sheet_obj.max_column)
-print(n)
+#print(n)
 virfer = 0
 virmart = 0
 virapr = 0
 virmay = 0
 virtov = 0
 virtov1 = 0 
-print(stroki)
-
-
+#print(stroki)
 
 maxi=0
 #   расчет общих продаж
@@ -36,6 +34,7 @@ while j < stroki and u < n:
     if j == stroki or j > stroki:
         u = u+1
         j = 3
+
 #Расчет суммы продаж по каждому товару за весь период        
 dolya = 0       
 while s < stroki and v < n:
@@ -50,11 +49,9 @@ while s < stroki and v < n:
         v = v+1
         s = 3
         dolya = virtov / virtov1 * 100
-        print(str(tovar.value) + 'продано на ' + str(virtov) + ' рублей, что составляет' + "{0:.2f}".format(dolya) + ' % от общих продаж ')
-        print()
+        print(str(tovar.value) + 'продано на ' + str(virtov) + 
+        ' рублей, что составляет ' + "{0:.2f}".format(dolya) + ' % от общих продаж ')
         virtov = 0 
-
-
 
 
 print('всего выручка составила ' + str(virtov1) + ' рублей.') # выручка общая
